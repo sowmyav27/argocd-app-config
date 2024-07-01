@@ -16,3 +16,9 @@ spec:
   destination:
     server: https://kubernetes.default.svc
     namespace: team-x
+  syncPolicy:
+    syncOptions:
+    - CreateNamspace=true
+    automated:
+      selfHeal: true
+      prune: true

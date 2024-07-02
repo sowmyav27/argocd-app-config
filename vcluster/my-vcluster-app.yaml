@@ -35,5 +35,5 @@ spec:
   sources: []
   syncPolicy:
     syncOptions:
-      - CreateNamspace=true
+      - CreateNamespace=true
   project: default

@@ -8,11 +8,13 @@ spec:
   source:
     repoURL: 'https://github.com/sowmyav27/argocd-app-config.git'
     targetRevision: HEAD
-    path: .
+    path: vcluster
   destination:
     server: 'https://kubernetes.default.svc'
-    namespace: default
+    namespace: my-vcluster
   syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
